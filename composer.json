@@ -1,0 +1,23 @@
+{
+    "name": "xinjia/spain-validator-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Validators for Spain Postcodes and Personal identifications",
+    "keywords": ["symfony", "symfony2", "spain", "validator", "postcode", "dni", "nie", "cif"],
+    "authors": [
+        {
+            "name": "Álvaro de la Vega Olmedilla",
+            "email": "alvarodlvo@gmail.com",
+            "homepage": "http://www.avegao.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "symfony/symfony": ">=2.5",
+        "symfony/validator": "~2.6"
+    },
+    "autoload": {
+        "psr-0": { "Xinjia\\SpainValidatorBundle": "" }
+    },
+    "target-dir": "Xinjia/SpainValidatorBundle"
+}
