@@ -20,7 +20,7 @@ class DniValidator extends ConstraintValidator
     /**
      * @var \Symfony\Component\Validator\Context\ExecutionContextInterface
      */
-    private $context;
+    protected $context;
 
     /**
      * Checks if the passed value is valid.
