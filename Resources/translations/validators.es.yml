@@ -1,0 +1,3 @@
+validator.dni.not_valid: DNI no válido
+validator.phone.not_valid: Número de teléfono no válido
+validator.phone.mobile.not_valid: Número de teléfono móvil no válido

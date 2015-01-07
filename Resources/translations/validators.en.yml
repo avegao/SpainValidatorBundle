@@ -1,0 +1,3 @@
+validator.dni.not_valid: DNI incorrect
+validator.phone.not_valid: Phone number incorrect
+validator.phone.mobile.not_valid: Mobilephone number incorrect
