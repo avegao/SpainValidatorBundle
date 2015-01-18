@@ -46,7 +46,7 @@ class MobilePhoneValidator extends ConstraintValidator
 
         if ($telephoneChars[0] == '6' || $telephoneChars[0] == '7')
         {
-            if (preg_match("^[7|6]\d{8}$", $mobileTelephone))
+            if (preg_match('/\(\[6\-7\]\\d\{8\}\)/', $mobileTelephone))
                 return true;
         }
 

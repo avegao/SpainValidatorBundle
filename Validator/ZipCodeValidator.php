@@ -28,7 +28,7 @@ class ZipCodeValidator extends ConstraintValidator
      */
     public function validate($value, Constraint $constraint)
     {
-        if (preg_match('(([0][1-9])|([1-4]\d)|([5][0-2]))(\d{2}[1-9])', $value))
+        if (preg_match('/\(\(\[0\]\[1\-9\]\)\|\(\[1\-4\]\\d\)\|\(\[5\]\[0\-2\]\)\)\(\\d\{3\}\)/', $value))
         {
             $this->context->buildViolation($constraint->message)
                 ->addViolation();
