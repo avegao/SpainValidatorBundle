@@ -2,3 +2,7 @@ validator.dni.not_valid: DNI no válido
 validator.phone.not_valid: Número de teléfono no válido
 validator.phone.mobile.not_valid: Número de teléfono móvil no válido
 validator.zip_code.not_valid: Código postal no válido
+
+
+validator.cif.not_valid: CIF no válido
+validator.dnicif.not_valid: DNI o CIF no válido
