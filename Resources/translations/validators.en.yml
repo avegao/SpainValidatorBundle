@@ -2,7 +2,3 @@ validator.dni.not_valid: DNI incorrect
 validator.phone.not_valid: Phone number incorrect
 validator.phone.mobile.not_valid: Mobilephone number incorrect
 validator.zip_code.not_valid: Zip code incorrect
-
-
-validator.cif.not_valid: CIF incorrect
-validator.dnicif.not_valid: DNI or CIF incorrect
