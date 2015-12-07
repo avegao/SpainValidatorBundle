@@ -41,15 +41,23 @@ class PhoneValidator extends ConstraintValidator
      */
     private function checkTelephone($telephone)
     {
-        $telephone = trim($telephone);
+        $return = false;
+        
+        //$telephone = trim($telephone);
+        trim($telephone);
         $telephoneChars = str_split($telephone);
 
+        if(empty($telephone)){
+            $return = true;
+        }
+        
         if ($telephoneChars[0] == '6' || $telephoneChars[0] == '7' || $telephoneChars[0] == '9' || $telephoneChars[0] == '8')
         {
-            if (preg_match('/[6-9]\d{8}/', $telephone))
-                return true;
+            if (preg_match('/[6-9]\d{8}/', $telephone)) {
+                $return = true;
+            }
         }
 
-        return false;
+        return $return;
     }
 }
