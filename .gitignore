@@ -1,1 +1,6 @@
+-phpunit.xml
+-composer.lock
+-composer.phar
+-autoload.php
+-/vendor/
 /nbproject/
