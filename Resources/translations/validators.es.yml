@@ -1,6 +1,7 @@
 validator.dni.not_valid: DNI no válido
 validator.phone.not_valid: Número de teléfono no válido
 validator.phone.mobile.not_valid: Número de teléfono móvil no válido
+validator.phone.all.not_valid: Número de teléfono no válido
 validator.zip_code.not_valid: Código postal no válido
 
 

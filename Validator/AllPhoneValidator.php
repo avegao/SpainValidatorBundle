@@ -7,11 +7,11 @@ use Symfony\Component\Validator\ConstraintValidator;
 
 
 /**
- * Class PhoneValidator
+ * Class AllPhoneValidator
  * @package Xinjia\SpainValidatorBundle\Validator
  * @author Álvaro de la Vega Olmedilla <alvarodlvo@gmail.com>
  */
-class PhoneValidator extends ConstraintValidator
+class AllPhoneValidator extends ConstraintValidator
 {
     /**
      * @var \Symfony\Component\Validator\Context\ExecutionContextInterface
@@ -50,9 +50,9 @@ class PhoneValidator extends ConstraintValidator
             $return = true;
         }
         
-        if ($telephoneChars[0] == '8' || $telephoneChars[0] == '9')
+        if ($telephoneChars[0] == '6' || $telephoneChars[0] == '7' || $telephoneChars[0] == '8' || $telephoneChars[0] == '9')
         {
-            if (preg_match('/[8-9]\d{8}/', $telephone)) {
+            if (preg_match('/[6-9]\d{8}/', $telephone)) {
                 $return = true;
             }
         }

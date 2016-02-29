@@ -40,16 +40,23 @@ class MobilePhoneValidator extends ConstraintValidator
      * @return bool
      */
     private function checkMobileTelephone($mobileTelephone)
-    {
-        $mobileTelephone = trim($mobileTelephone);
+    {           
+        $return = false;
+        
+        trim($mobileTelephone);
         $telephoneChars = str_split($mobileTelephone);
 
+        if(empty($mobileTelephone)){
+            $return = true;
+        }
+        
         if ($telephoneChars[0] == '6' || $telephoneChars[0] == '7')
         {
-            if (preg_match('/[6-7]\d{8}/', $mobileTelephone))
-                return true;
+            if (preg_match('/[6-7]\d{8}/', $mobileTelephone)) {
+                $return = true;
+            }
         }
 
-        return false;
+        return $return;
     }
 }
