@@ -38,6 +38,8 @@ public function registerBundles()
 ```
 ## Ejemplo de uso
 
+Uso desde la entidad:
+
 ```php
 <?php
 
@@ -131,4 +133,67 @@ class MyEntity {
     private $cif;
 
 }
+```
+
+Uso desde el controlador:
+
+```php
+<?php
+
+namespace AppBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+
+use Xinjia\SpainValidatorBundle\Validator\AllPhone;
+use Xinjia\SpainValidatorBundle\Validator\Phone;
+use Xinjia\SpainValidatorBundle\Validator\MobilePhone;
+use Xinjia\SpainValidatorBundle\Validator\ZipCode;
+use Xinjia\SpainValidatorBundle\Validator\DniCif;
+use Xinjia\SpainValidatorBundle\Validator\Cif;
+use Xinjia\SpainValidatorBundle\Validator\Dni;
+
+class DefaultController extends Controller {
+
+    public function indexAction(Request $request) {
+
+        $form = $this->createFormBuilder()
+                ->add('telefono', 'text', [
+                    'constraints' => new AllPhone(),
+                ])
+                ->add('telefonoFijo', 'text', [
+                    'constraints' => new Phone(),
+                ])
+                ->add('telefonoMovil', 'text', [
+                    'constraints' => new MobilePhone(),
+                ])
+                ->add('codigoPostal', 'text', [
+                    'constraints' => new ZipCode(),
+                ])
+                ->add('dniCif', 'text', [
+                    'constraints' => new DniCif(),
+                ])
+                ->add('cif', 'text', [
+                    'constraints' => new Cif(),
+                ])
+                ->add('dni', 'text', [
+                    'constraints' => new Dni(),
+                ])
+                ->add('save', 'submit', array('label' => 'Send'))
+                ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            // ...
+        }
+
+        // replace this example code with whatever you need
+        return $this->render('AppBundle:Default:index.html.twig', [
+                    'form' => $form->createView(),
+        ]);
+    }
+
+}
+
 ```
